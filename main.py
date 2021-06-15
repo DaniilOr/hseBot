@@ -148,6 +148,7 @@ async def get_topN(message: types.Message):
         N = int(N)
     except:
         await message.reply("В комманде нужно указать число")
+        return
     if N <= 0:
         await message.reply("Не думаю, что я могу показать отрицательное число коинов")
         return
@@ -176,6 +177,7 @@ async def exchange(message: types.Message):
         N = int(N)
     except:
         await message.reply("В комманде нужно указать число")
+        return
     if N <= 0:
         await message.reply("Не думаю, что я могу показать отрицательное число статей")
         return
@@ -207,6 +209,7 @@ async def exchange(message: types.Message):
         N = int(N)
     except:
         await message.reply("В комманде нужно указать число")
+        return
     if int(N) <= 0:
         await message.reply("Не думаю, что я могу показать отрицательное число дней")
         return
