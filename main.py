@@ -112,6 +112,8 @@ async def read_sum(message: types.Message,  state: FSMContext):
         sum = int(message.text)
     except:
         await message.reply("Сумма должна быть числом", reply_markup=buttons.CANCEL)
+        state.finish()
+
     else:
         if Exchanging.op_type == "other":
             await bot.send_message(chat_id=message.chat.id,
