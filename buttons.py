@@ -10,4 +10,4 @@ OTHER = InlineKeyboardButton('Другое', callback_data='other')
 kb = InlineKeyboardMarkup(row_width=3, one_time_keyboard=True).add(BTC, USD, ETH)
 kb.add(OTHER)
 
-CANCEL =  InlineKeyboardButton('Отена', callback_data='cancel')
+CANCEL = InlineKeyboardMarkup().add(InlineKeyboardButton('Отена', callback_data='cancel'))
