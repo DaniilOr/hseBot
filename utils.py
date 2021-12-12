@@ -1,3 +1,14 @@
-def prettify_coins(coins):
-    pretty_strings = [f"{coin['symbol']}:{coin['price']}" for coin in coins]
-    return "\n".join(pretty_strings)
+import os
+
+
+def delete_file(filename:str):
+    """
+        This function deletes all files related to the current user
+
+        :param filename: str - user id
+    """
+    if f"{filename}.csv" not in os.listdir("files/"):
+        return False
+    os.remove(f"files/{filename}.csv")
+    os.remove(f"files/{filename}.png")
+    return True
